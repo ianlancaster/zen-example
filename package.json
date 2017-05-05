@@ -11,6 +11,8 @@
     "build:prod": "docker build -t ianlancaster/zen-production .",
     "start:prod": "docker run --rm -d -p 80:80 --name running-zen ianlancaster/zen-production",
     "stop:prod": "docker stop running-zen",
+    "create:aws": "chmod +x ./bin/deploy.sh; ./bin/deploy.sh create",
+    "deploy:aws": "chmod +x ./bin/deploy.sh; ./bin/deploy.sh deploy",
     "clean": "rimraf dist",
     "compile": "better-npm-run compile",
     "lint": "eslint .",
