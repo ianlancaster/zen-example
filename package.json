@@ -8,6 +8,9 @@
     "npm": "^3.0.0"
   },
   "scripts": {
+    "build:prod": "docker build -t ianlancaster/zen-production .",
+    "start:prod": "docker run --rm -d -p 80:80 --name running-zen ianlancaster/zen-production",
+    "stop:prod": "docker stop running-zen",
     "clean": "rimraf dist",
     "compile": "better-npm-run compile",
     "lint": "eslint .",
